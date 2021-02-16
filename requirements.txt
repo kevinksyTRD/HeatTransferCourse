@@ -1,0 +1,6 @@
+jupyterlab  # Jupyter notebook
+numpy  # Numerical calculation
+scipy  # Scientific calculation
+matplotlib  # Plot
+iapws  # Steam and water property package
+psychrochart  # Drawing psychrochart
