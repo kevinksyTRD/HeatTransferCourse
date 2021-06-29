@@ -5,20 +5,9 @@ These materials are written in Jupyter Notebook, which is based on Python. You s
 minimum knowledge of Python to manipulate it. Don't worry. You will be still see and run the 
 code as it is. But you still need to set up the environment to do that. 
 
-### Install the right version of Python (>=3.8)
-First, you need Python installed on your PC. The version should be at least 3.8 or up. The 
-easiest way to check if you have the right version of python is to open a terminal or command 
-prompt and enter the following command.
-```commandline
-python --version
-```
-You can also try
-```commandline
-python3 --version
-```
-Otherwise, you can easily install Python by going [here](https://www.python.org/downloads/). 
-Don't change the options for the install if you don't know what you are doing. After 
-installation, check the version as above to make sure that you have got the right python installed. 
+### Install the right version of Python with Anaconda(>=3.8)
+We recommend you to use the <em>Anaconda</em> distribution to install python. Use this 
+[link](https://www.anaconda.com/download) to download a proper version for your OS.
 
 ### Install Git
 This step is optional. You can download the repository from the webpage as a zip file. But, I 
@@ -39,39 +28,36 @@ If you don't like a terminal, Github Desktop is an option. You can download it
 
 ### Create a virtual environment
 In order to prevent any conflict with the packages that you already have installed and what will 
-work for these notebooks, I recommend creating a virtual environment. First, you have to install 
-the virtual environment package if you haven't. I will assume that you can enter 'python' in any 
-directory to run Python. First, you need to be in the directory of these materials.
-```commandline
-cd HeatTransferCourse
-pip install virtualenv
-```
-Then, create a virtual environment.
-```commandline
-python -m virtualenv venv
-```
-This will create your virtual environment in 'venv' directory. Next you can activate the virtual 
-environment. If you are on Windows PC, 
-```commandline 
-venv\Script\activate
-```
-Otherwise,
-```commandline
-source venv/bin/activate
-```
-NB! Whenever you restarted the terminal, make sure that you activate the virtual environment using 
-the above command.
+work for these notebooks, creating the environment by importing the `TMR4222ThermalSystem.yaml`. 
 
-### Install Packages
-Once you have activated your virtual environment, you can now install your packages. You must be 
-connected to internet to do so.
-```commandline
-pip install -r requirements.txt
-```
-This will install all the necessary packages to run the notebooks.
+#### Step 1 of 2: Update your Anaconda installation 
+First, open an Anaconda prompt. 
+- Windows:
+    - Open Anaconda Prompt from the Start menu.
+    - Close all other open Anaconda programs, including Anaconda Navigator and Spyder.
+- Mac:
+    - Open Terminal from Launchpad, or from the Applications folder (look inside the Utilities folder).
+- Linux:
+    - Open a terminal window.
 
-### Run Jupyter Lab
-Launch Jupyter Lab with:
-```commandline
-jupyter-lab
-```
+Then, run the following two commands:
+
+`conda update -y conda`
+
+and:
+
+`conda update -y anaconda`
+
+#### Step 2 of 2: Import the .yaml file
+
+Open Anaconda Navigator and click the Environments tab in the left menu. 
+Then click Import and select the `TMR4222ThermalSystem.yaml` file.
+
+![yaml import](images/navigator-import-environment.png)
+
+## Run Jupyter Lab
+Launch Anaconda Navigator. First select the environment that you have imported.
+
+![Select environment](images/navigator-select-environment.png)
+
+Now click Jupyter Lab launch button.
